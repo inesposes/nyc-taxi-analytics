@@ -8,7 +8,7 @@ Este proyecto implementa un pipeline ETL completo sobre los datos históricos de
 
 ## 2️⃣ Arquitectura
 
-### Capa Bronze 
+### Capa Bronze - *bronze_layer.html*
 
 En esta capa se realiza la **ingesta de los archivos CSV originales** mensuales del NYC Taxi Data. Los archivos se leen desde un volumen en Databricks, se combinan en un único DataFrame y se almacenan en **formato Parquet** en un volumen.
 
@@ -16,9 +16,9 @@ En esta capa se realiza la **ingesta de los archivos CSV originales** mensuales 
 
 ---
 
-### Capa Silver 
+### Capa Silver - *silver_layer.html*
 
-En esta etapa se aplican transformaciones para mejorar la **calidad y tulidad** de los datos. 
+En esta etapa se aplican transformaciones para mejorar la **calidad y utilidad** de los datos. 
 
 #### Transformaciones realizadas:
 - Eliminación de **duplicados** y **valores nulos**.
@@ -37,7 +37,7 @@ En esta etapa se aplican transformaciones para mejorar la **calidad y tulidad** 
 
 ---
 
-### Capa Gold 
+### Capa Gold - *gold_layer.html*
 
 Se generan **tablas** orientadas a la visualización en el dashboard.
 
@@ -97,7 +97,7 @@ El proceso ETL está completamente **automatizado** mediante un **pipeline de Da
 
 ---
 
-## 4️⃣ Dashboards e Indicadores
+## 4️⃣ Dashboards e indicadores - *dashboard.pdf*
 
 A partir de las tablas Gold, el dashboard se centra en tres aspectos principales de los que se extraen los siguientes KPIs:
 
